@@ -59,7 +59,7 @@ a {
   font-weight: 400;
   font-size: 18px;
   line-height: 18px;
-  font-family: "Graphik LC Web";
+  font-family: "Graphik L	C Web";
 }
 .top-bar__menu__element::after {
   position: absolute;
@@ -69,7 +69,7 @@ a {
 }
 .top-bar__menu__element_activ::after {
   transform: rotate(180deg);
-  padding-left: 0;
+  padding-right: 10px;
 }
 .top-bar__menu__link {
   color: #FDFDFD;

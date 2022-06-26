@@ -8,14 +8,17 @@ window.addEventListener('scroll', () => {
     let backgroundValue;
     let activChek = 0;
 
-    if (scrollDistanse >= 100) {
-        topBar.classList.add("top-bar_activ");
+    if (scrollDistanse < 500) {
         let backgroundOpacity = (scrollDistanse/500).toFixed(2);
         backgroundValue = "linear-gradient(rgba(255, 255, 255," + backgroundOpacity + "), rgba(255, 255, 255," + backgroundOpacity + ")), url(../img/header.png)"
         header.style.backgroundImage = backgroundValue;
     }
 
-    if (scrollDistanse < 100) {
+    if (scrollDistanse >= 200) {
+        topBar.classList.add("top-bar_activ");
+    }
+
+    if (scrollDistanse < 200) {
         for(i = 0; i < buttons.length; i++) {
             if(buttons[i].classList.contains("top-bar__menu__element_activ")) {
                 activChek = 1;
@@ -23,15 +26,13 @@ window.addEventListener('scroll', () => {
         }
         if(activChek == 0) {
             topBar.classList.remove("top-bar_activ");
-            backgroundValue = "linear-gradient(rgba(255, 255, 255, 0.0), rgba(255, 255, 255,  0.0)), url(../img/header.png)"
-            header.style.backgroundImage = backgroundValue;
         }
     }
 })
 
 document.addEventListener("DOMContentLoaded", () => {
     let scrollDistanse = window.scrollY;
-    if (scrollDistanse >= 100) {
+    if (scrollDistanse >= 20) {
         topBar.classList.add("top-bar_activ");
     }
 });
@@ -63,7 +64,7 @@ function menuEvent(event) {
             }
         }
         topBar.classList.add("top-bar_activ");
-    } else if (scrollDistanse < 100){
+    } else if (scrollDistanse < 20){
         topBar.classList.remove("top-bar_activ");
     }
 }

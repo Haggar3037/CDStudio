@@ -70,7 +70,7 @@ a{
 			font-weight: 400;
 			font-size: 18px;
 			line-height: 18px;
-			font-family: 'Graphik LC Web';
+			font-family: 'Graphik L	C Web';
 	
 			&::after {
 				position: absolute;
@@ -81,7 +81,7 @@ a{
 	
 			&_activ::after {
 				transform: rotate(180deg); 
-				padding-left: 0;
+				padding-right: 10px;
 			}
 		}
 	
